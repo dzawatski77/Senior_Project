@@ -10,7 +10,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor}) => (
   <TooltipComponent context={title} position="BottomCenter">
-    <button type="button" onClick={customFunc} style={{ color}}
+    <button type="button" onClick={() => customFunc()} style={{ color}}
     className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
       <span syle={{ background: dotColor }}
@@ -18,7 +18,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor}) => (
           {icon}
     </button>
   </TooltipComponent>
-)
+);
 
 const Navbar = () => {
   const { activeMenu, setActiveMenu, isClicked, handleClick, 
@@ -43,9 +43,10 @@ const Navbar = () => {
       }
     }, [screenSize]);
 
+    const handleActiveMenu = () => setActiveMenu(!activeMenu);
 
   return (
-    <div className= "flex justify-between p2 md:mx-6 relative">
+    <div className= "flex justify-between p-2 md:ml-6 md:mr-6 relative">
       <NavButton title="Menu" customFunc={() =>
       setActiveMenu((prevActiveMenu) =>
       !prevActiveMenu)} color="blue" icon={<AiOutlineMenu />} />
@@ -75,6 +76,7 @@ const Navbar = () => {
               <img
               className="rounded-full w-8 h-8"
               src={avatar}
+              alt="user-profile"
               />
               <p>
                 <span className="text-gray-400 text-14">Hi, </span> {' '}

@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 //import { TooltipComponent } from '@syncfunsion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Home, EventHistory, Calendar, CreateEvent, Attendees, ToDoList, FindEvents, SwitchMode, Pie} from './pages';
+import { Home, EventHistory, Calendar, CreateEvent, Attendees, Worklist, FindEvents, SwitchMode, Pie} from './pages';
 import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 
@@ -45,27 +45,28 @@ const App = () => {
                     <div className="fixed md:static bg-main-bg dark:bg-main-bg navbar w-full">
                         <Navbar />
                     </div>    
-                </div>
-                <div>
-                    <Routes>
-                        {/* Dashboard Home */}
-                        <Route path="/" element={<Home/>} />
-                        <Route path="/Home" element={<Home/>} />
+                
+                    <div>
+                     <Routes>
+                         {/* Dashboard Home */}
+                         <Route path="/" element={<Home />} />
+                         <Route path="/Home" element={<Home />} />
 
-                        {/* Pages */}
-                        <Route path="/Event History" element={<EventHistory />} />
-                        <Route path="/Create Event" element={<CreateEvent />} />
-                        <Route path="/Attendees" element={<Attendees />} />
+                         {/* Pages */}
+                         <Route path="/Event History" element={<EventHistory />} />
+                         <Route path="/Create Event" element={<CreateEvent />} />
+                         <Route path="/Attendees" element={<Attendees />} />
 
-                        {/* apps */}
-                        <Route path="/Calendar" element={<Calendar />} />
-                        <Route path="/ToDoList" element={<ToDoList />} />
-                        <Route path="/Find Events" element={<FindEvents />} />
+                         {/* apps */}
+                         <Route path="/Calendar" element={<Calendar />} />
+                         <Route path="/Worklist" element={<Worklist />} />
+                         <Route path="/Find Events" element={<FindEvents />} />
                         
-                        {/* switch mode */}
-                        <Route path="/Switch Mode" element={<SwitchMode />} />
+                         {/* switch mode */}
+                          <Route path="/Switch Mode" element={<SwitchMode />} />
 
-                    </Routes>
+                        </Routes>
+                    </div>
                 </div>
             </div>
         </BrowserRouter>
