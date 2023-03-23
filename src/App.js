@@ -78,7 +78,7 @@ const App = () => {
                          <Route path="/Bar" element={<Bar />} />
                         
                          {/* switch mode */}
-                          <Route path="/Switch Mode" element={<SwitchMode />} />
+                          <Route path="/App" element={<App />} />
 
                         </Routes>
                     </div>
