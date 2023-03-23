@@ -8,9 +8,9 @@ import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dr
 function EventHistory() {
     let gridInstance;
     const filterType = [
-        { text: 'Menu', value: 'Menu' },
-        { text: 'Checkbox', value: 'CheckBox' },
-        { text: 'Excel', value: 'Excel' },
+        { text: 'Event', value: 'Event' },
+        { text: 'Club', value: 'Club' },
+        { text: 'Class', value: 'Class' },
     ];
     const filterSettings = { type: 'Menu' };
     const fields = { text: 'text', value: 'value' };
@@ -21,7 +21,7 @@ function EventHistory() {
     }
 
 
-    return (<div className=' m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
+    return (<div className=' m-2 md:m-10 p-2 md:p-10  dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
       <Header category="Page" title="Event History" />
         <div style={{ padding: '14px' }}>
           <DropDownListComponent id="ddlelement" dataSource={filterType} fields={fields} change={onChange.bind(this)} index={0} popupHeight="150px" width="200px"/>

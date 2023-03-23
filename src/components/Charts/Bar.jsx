@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Bar = () => {
   return (
     <div>
-      pie chart
+      
     </div>
   )
 }
 
-export default Pie
+export default Bar

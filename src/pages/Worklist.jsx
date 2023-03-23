@@ -11,7 +11,7 @@ import { Header } from "../components";
 function Worklist() {
     let data = extend([], kanbanGrid.kanbanData, null, true);
     return (<div className='kanban-control-section'>
-            <div className='col-lg-12 control-section m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl'>
+            <div className='col-lg-12 control-section m-2 md:m-10 mt-24 p-2 md:p-10  dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
                 <Header category="App" title="Worklist" />
                 <div className='control-wrapper'>
                     <KanbanComponent id="kanban" keyField="Status" dataSource={kanbanData} cardSettings={{ contentField: "Summary", headerField: "Id" }}>
