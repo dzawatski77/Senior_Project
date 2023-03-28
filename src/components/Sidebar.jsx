@@ -39,7 +39,7 @@ const Sidebar = () => {
       <div className="mt-10 ">
         {links.map((item) => (
           <div key={item.title}>
-            <p className="text-gray-400 m-3 mt-4 uppercase">
+            <p className="text-gray-400 m-3 mt-4 uppercase drop-shadow-md">
             {item.title}
             </p>
             {item.links.map((link) => (
@@ -51,7 +51,7 @@ const Sidebar = () => {
               className={({ isActive }) => isActive ? activeLink : normalLink}
               >
                 {link.icon}
-                <span className="capitalize">
+                <span className="capitalize drop-shadow-md">
                   {link.name}
                 </span>
               </NavLink>

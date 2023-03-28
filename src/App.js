@@ -16,7 +16,7 @@ const App = () => {
     <div className={currentMode === 'Dark' ? 'dark' :  ''}>
     <div>
         <BrowserRouter>
-            <div className="flex relative bg:black dark:bg-main-dark-bg">
+            <div className="flex relative dark:bg-main-dark-bg">
                 <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
                     <TooltipComponent 
                         content="Settings"
@@ -36,7 +36,7 @@ const App = () => {
                 {/* Left Side Sidebar pop out*/}
                 {activeMenu ? (
                     <div className="w-72 h-0 fixed sidebar
-                    dark:bg-secondary-dark-bg
+                    dark:bg-main-dark-bg
                     bg-white">
                         <Sidebar />
                     </div>
@@ -48,11 +48,11 @@ const App = () => {
                     </div>
                 )}
                 <div className={
-                    `dark:bg-main-dark-bg bg-slate-100 min-h-screen w-full ${ activeMenu 
+                    `dark:bg-secondary-dark-bg bg-slate-100 min-h-screen w-full ${ activeMenu 
                         ? 'md:ml-72' 
                         : 'flex-2'}`
                 }>
-                    <div className="fixed md:static bg-slate-100 dark:bg-main-dark-bg navbar w-full">
+                    <div className="fixed md:static bg-slate-100 dark:bg-secondary-dark-bg navbar w-full">
                         <Navbar />
                     </div>
 
