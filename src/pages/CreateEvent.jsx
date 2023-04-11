@@ -1,16 +1,22 @@
 //import React from 'react'
-import { Header } from '../components';
+import { Header, Button, Event } from '../components';
 import React, { useState } from "react";
+import { useStateContext } from '../contexts/ContextProvider';
 import ReactDOM from "react-dom";
 import TimePicker from 'react-time-picker';
 import { Link } from "react-router-dom";
-import Event from "../components/Event";
+//import Event from "../components/Event";
 
 
 
 
-const CreateEvent = () => {
-    
+  const CreateEvent = () => {
+    const { currentColor } = useStateContext();
+    const [timeStart, onChange1] = useState('10:00');
+    const [timeEnd, onChange2] = useState('11:00');
+    const [errorMessages, setErrorMessages] = useState({});
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
   return (
     <div className=' m-2 md:m-10 p-2 md:p-10 drop-shadow-2xl dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
       <Header category="Page" title="Create Event" />
@@ -134,8 +140,13 @@ const CreateEvent = () => {
               " rows="5" spellcheck="true"></textarea>
           </label>
 
-          
-
+          <Button
+          color="white"
+          bgColor={currentColor}
+          text="Submit"
+          borderRadius="10px"
+          drop-shadow="md"
+          className="popup-button"/>
 
         </form>
       </main>
