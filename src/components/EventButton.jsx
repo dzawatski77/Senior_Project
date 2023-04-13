@@ -2,7 +2,7 @@ import React from 'react';
 
 const EventButton = ({ bgColor, color, size, text, borderRadius }) => {
     function callPort(parameter) {
-        const url = `http://localhost:3001?param=${parameter}`;
+        const url = `http://localhost:3001?eventID=${parameter}`;
         window.location.href = url;
     }
 
@@ -12,7 +12,7 @@ const EventButton = ({ bgColor, color, size, text, borderRadius }) => {
                 type="button"
                 style={{ backgroundColor: bgColor, color, borderRadius }}
                 className={`text-${size} p-3 hover:drop-shadow-xl`}
-                onClick={() => callPort('parameter_value')}>
+                onClick={() => callPort("testing123")}>
                 {text}
             </button>
         </div>
