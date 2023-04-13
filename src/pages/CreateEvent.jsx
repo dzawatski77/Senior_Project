@@ -5,8 +5,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import ReactDOM from "react-dom";
 import TimePicker from 'react-time-picker';
 import { Link } from "react-router-dom";
-
-
+import EventButton from '../components/EventButton';
 
 
   const CreateEvent = () => {
@@ -161,7 +160,11 @@ import { Link } from "react-router-dom";
           borderRadius="10px"
           drop-shadow="md"
           className="popup-button"
+          //onClick={() => callPort('papameter_value')}
           type="submit"/>
+
+          <EventButton 
+          text="3001 call"/>
         </form>
       </main>
       </div>
