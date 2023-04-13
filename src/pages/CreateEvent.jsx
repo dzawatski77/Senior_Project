@@ -153,13 +153,16 @@ import EventButton from '../components/EventButton';
               "rows="5" spellCheck="true"></textarea>
           </label>
 
+          
+
           <EventButton
           color="white"
           bgColor={currentColor}
           text="Submit"
+          size="w-4"
           borderRadius="10px"
           drop-shadow="md"
-          className="popup-button w-100%"
+          className="popup-button"
           //onClick={() => callPort('papameter_value')}
           type="submit"/>
           
