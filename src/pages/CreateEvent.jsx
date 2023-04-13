@@ -48,7 +48,7 @@ import { Link } from "react-router-dom";
               " value={eventName}
               onChange={handleEventNameChange}></input>
               {errorMessage && (
-              <p class="text-red-500 text-xs italic">{errorMessage}</p>
+              <p className="text-red-500 text-xs italic">{errorMessage}</p>
             )}
           </label>
 
