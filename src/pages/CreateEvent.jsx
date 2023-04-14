@@ -22,8 +22,7 @@ import EventButton from '../components/EventButton';
     const [eventEndTimeError, setEventEndTimeError] = useState("");
     const [eventLocationError, setEventLocationError] = useState("");
     const [eventRepeatError, setEventRepeatError] = useState("");
-    const eventDataJSON = useState("");
-    //const [errorMessage, setErrorMessage] = useState("");
+  //const [errorMessage, setErrorMessage] = useState("");
 
   const handleEventNameChange = (e) => {
     setEventName(e.target.value);
