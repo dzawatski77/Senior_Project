@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const LogoutButton = ({ bgColor, color, size, text, borderRadius }) => {
     function callPort(parameter) {
         const url = `http://localhost:3000?eventID=${parameter}`;

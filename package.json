@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^2.0.1",
     "@syncfusion/ej2": "^19.4.48",
     "@syncfusion/ej2-react-buttons": "20.4.53",
     "@syncfusion/ej2-react-calendars": "^19.4.48",

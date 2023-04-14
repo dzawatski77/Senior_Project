@@ -20,8 +20,8 @@ const Home = () => {
   const { currentColor } = useStateContext();
   return (
     <div>
-      <div>
-    <div className='m-2 md:m-10 p-2 md:p-10 drop-shadow-2xl dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
+      <div className="pt-10">
+    <div className=' mt-5 pt-10 pt-10 m-2 md:m-10 p-2 md:p-10 drop-shadow-2xl dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
       <Header category="Home" title="Event Pro" />
       <div className='flex justify-between items-center'>
         <div>
