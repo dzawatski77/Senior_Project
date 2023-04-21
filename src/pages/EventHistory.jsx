@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { GridComponent, ColumnsDirective, Group, ColumnDirective, Page, Inject, ContextMenu, Resize, Sort, Filter, ExcelExport, PdfExport, Edit } from '@syncfusion/ej2-react-grids';
-import { ordersData } from '../data/dummy';
+import { historyData } from '../data/dummy';
 import { Header } from '../components';
 import { DropDownListComponent, ChangeEventArgs } from '@syncfusion/ej2-react-dropdowns';
 
@@ -28,7 +28,7 @@ function EventHistory() {
           <DropDownListComponent id="ddlelement" dataSource={filterType} fields={fields} change={onChange.bind(this)} index={0} popupHeight="150px" width="200px"/>
         </div>
             <div className='control-section row drop-shadow-2xl'>
-                <GridComponent dataSource={ordersData} allowSorting={true} allowPaging={true} ref={grid=>gridInstance=grid} pageSettings={{ pageSize: 15, pageCount: 5 }} allowFiltering={true}  filterSettings={filterSettings} allowGrouping={true}>
+                <GridComponent className="bg-sky500" dataSource={historyData} allowSorting={true} allowPaging={true} ref={grid=>gridInstance=grid} pageSettings={{ pageSize: 15, pageCount: 5 }} allowFiltering={true}  filterSettings={filterSettings} allowGrouping={true}>
                     <ColumnsDirective>
                         <ColumnDirective field='EventID' headerText='Event ID' width='120' textAlign='Right'></ColumnDirective>
                         <ColumnDirective field='EventName' headerText='Event Name' width='150'></ColumnDirective>
@@ -36,7 +36,6 @@ function EventHistory() {
                         <ColumnDirective field='StartTime' headerText='Start Time' width='120' textAlign='Right'/>
                         <ColumnDirective field='EndTime' headerText='End Time' width='130' textAlign='Right'></ColumnDirective>
                         <ColumnDirective field='Location' headerText='Location' width='150'></ColumnDirective>
-                        <ColumnDirective field='Creator' headerText='Creator' width='150'></ColumnDirective>
                     </ColumnsDirective>
                     <Inject services={[Resize, Page, Group, Sort, ContextMenu, Filter, ExcelExport, Edit, PdfExport]}/>
                 </GridComponent>

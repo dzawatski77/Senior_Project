@@ -11,7 +11,8 @@ import { DatePickerComponent } from '@syncfusion/ej2-react-calendars'
 import { Header, Footer } from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Button } from '../components';
-import { scheduleData, earningData } from '../data/dummy';
+import { scheduleData, featureddata } from '../data/dummy';
+import { Link } from 'react-router-dom';
 //import { ListViewComponent, ListView, Inject, Virtualization } from '@syncfusion/ej2-react-lists';
 
 
@@ -26,12 +27,12 @@ const Home = () => {
       <div className='flex justify-between items-center'>
         <div>
           <p className='font-bold dark:text-gray-200 text-2xl'>Welcome back!</p>
-          <p className='dark:text-gray-200 text-lg'>Check out today's featured events.</p>
+          <p className='dark:text-gray-200 text-lg'>Check out your past events.</p>
         </div>
       </div>
       
         <div className='flex m-2 pl-0 flex-wrap justify-start gap-3 items-stretch'>
-          {earningData.map((item) => (
+          {featureddata.map((item) => (
             <div
               key={item.title}
               className="bg-white
@@ -59,13 +60,15 @@ const Home = () => {
                   </span>
                 </p>
                 <div className="flex justify-end">
-                  <Button 
+                  <a href='/Event History'>
+                  <Button
                   color="white"
                   bgColor={currentColor}
-                  text="Attend"
+                  text="History"
                   borderRadius="10px"
-                  drop-shadow="md"
-                  />
+                  drop-shadow="md">
+                  </Button>
+                  </a>
                 </div>
             </div>
           ))}
@@ -86,7 +89,6 @@ const Home = () => {
       </div>
       </div>  
       
-    
   )
 }
 

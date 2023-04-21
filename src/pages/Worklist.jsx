@@ -16,10 +16,9 @@ function Worklist() {
                 <div className='control-wrapper'>
                     <KanbanComponent className='drop-shadow-md' id="kanban" keyField="Status" dataSource={kanbanData} cardSettings={{ contentField: "Summary", headerField: "Id" }}>
                         <ColumnsDirective>
-                            <ColumnDirective headerText="To Do" keyField="Open"/>
+                            <ColumnDirective headerText="To Do" keyField="To Do"/>
                             <ColumnDirective headerText="In Progress" keyField="InProgress"/>
-                            <ColumnDirective headerText="Testing" keyField="Testing"/>
-                            <ColumnDirective headerText="Done" keyField="Close"/>
+                            <ColumnDirective headerText="Done" keyField="Done"/>
                         </ColumnsDirective>
                     </KanbanComponent>
                 </div>

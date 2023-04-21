@@ -256,7 +256,7 @@ import EventButton from '../components/EventButton';
               color="white"
               bgColor={currentColor}
               borderRadius="10px"
-              className="popup-button w-100% h-20"
+              className="popup-button w-100% h-14 bg-sky-300 hover:bg-sky-400 rounded-lg hover:drop-shadow-lg"
               onClick={handleSubmit}>
               Submit
           </button>

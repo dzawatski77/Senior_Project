@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Home, EventHistory, Calendar, CreateEvent, Attendees, Worklist, FindEvents, SwitchMode, Bar} from './pages';
+import { Home, EventHistory, Calendar, CreateEvent, Attendees, Worklist, UpcomingEvents, SwitchMode, LineChart} from './pages';
 import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 
@@ -70,12 +70,12 @@ const App = () => {
                          <Route path="/Event History" element={<EventHistory />} />
                          <Route path="/Create Event" element={<CreateEvent />} />
                          <Route path="/Attendees" element={<Attendees />} />
-                         <Route path="/Find Events" element={<FindEvents />} />
+                         <Route path="/Upcoming Events" element={<UpcomingEvents />} />
 
                          {/* apps */}
                          <Route path="/Calendar" element={<Calendar />} />
                          <Route path="/Worklist" element={<Worklist />} />
-                         <Route path="/Bar" element={<Bar />} />
+                         <Route path="/Line Chart" element={<LineChart />} />
                         
                          {/* switch mode */}
                           <Route path="/App" element={<App />} />
