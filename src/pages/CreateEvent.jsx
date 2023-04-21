@@ -75,15 +75,6 @@ import { useStateContext } from '../contexts/ContextProvider';
       setEventRepeatError(eventRepeatError);
     } else {
       // Handle event submission logic here
-      const eventData = {
-        eventName : eventName,
-        eventDate : eventDate,
-        eventStartTime : eventStartTime,
-        eventEndTime : eventEndTime,
-        eventLocation : eventLocation,
-        eventRepeat : eventRepeat
-      }
-      const eventDataJson = JSON.stringify(eventData)
       const url = `http://localhost:3001?eventID=${eventDataJSON}`;
       window.location.href = url;
     }
