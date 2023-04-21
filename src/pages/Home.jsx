@@ -1,19 +1,10 @@
 import React from 'react'
-
-
-import { ScheduleComponent, ViewDirective, ViewsDirective, Day, 
-  Week, Month, Agenda, Inject,Resize, DragAndDrop, WorkWeek } from '@syncfusion/ej2-react-schedule';
-import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
-import { DatePickerComponent } from '@syncfusion/ej2-react-calendars'
-
-
-
-import { Header, Footer } from '../components';
+import { ScheduleComponent, Day, Week, Month, Agenda, Inject,Resize, WorkWeek } from '@syncfusion/ej2-react-schedule';
+import { Header } from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Button } from '../components';
 import { scheduleData, featureddata } from '../data/dummy';
-import { Link } from 'react-router-dom';
-//import { ListViewComponent, ListView, Inject, Virtualization } from '@syncfusion/ej2-react-lists';
+
 
 
 
@@ -22,7 +13,7 @@ const Home = () => {
   return (
     <div>
       <div className="pt-10">
-    <div className=' mt-5 pt-10 pt-10 m-2 md:m-10 p-2 md:p-10 drop-shadow-2xl dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
+    <div className=' mt-5 pt-10 m-2 md:m-10 p-2 md:p-10 drop-shadow-2xl dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
       <Header category="Home" title="Event Pro" />
       <div className='flex justify-between items-center'>
         <div>
@@ -77,6 +68,7 @@ const Home = () => {
       
         <div className="mt-20 ">
           <p className='font-bold dark:text-gray-200 text-2xl'>Recent Events</p>
+          <p className='text-xs dark:text-gray-200'>(Double click to edit)</p>
         </div>
         
         <div className="m-2 md:m-2 mt-12 p-2 md:p-2 drop-shadow-2xl">

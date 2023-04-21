@@ -1,12 +1,7 @@
 //import React from 'react'
-import { Header, Button, Event } from '../components';
+import { Header } from '../components';
 import React, { useState } from "react";
 import { useStateContext } from '../contexts/ContextProvider';
-import ReactDOM from "react-dom";
-import TimePicker from 'react-time-picker';
-import { Link } from "react-router-dom";
-import EventButton from '../components/EventButton';
-
 
   const CreateEvent = () => {
     const { currentColor } = useStateContext();
@@ -93,8 +88,6 @@ import EventButton from '../components/EventButton';
       window.location.href = url;
     }
   };
-  
-
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   if (eventName.trim() === "") {
@@ -256,19 +249,10 @@ import EventButton from '../components/EventButton';
               color="white"
               bgColor={currentColor}
               borderRadius="10px"
-              className="popup-button w-100% h-14 bg-sky-300 hover:bg-sky-400 rounded-lg hover:drop-shadow-lg"
+              className="popup-button w-100% h-14 bg-sky-400 hover:bg-sky-500 rounded-lg hover:drop-shadow-lg"
               onClick={handleSubmit}>
               Submit
           </button>
-          {/* <EventButton
-          color="white"
-          bgColor={currentColor}
-          text="Sumbit"
-          borderRadius="10px"
-          drop-shadow="md"
-          className="popup-button w-100%"
-          //onClick={() => callPort('papameter_value')}
-          type="submit"/> */}
           
         </form>
       </main>

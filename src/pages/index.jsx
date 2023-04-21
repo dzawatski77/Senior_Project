@@ -6,5 +6,4 @@ export { default as CreateEvent } from './CreateEvent';
 export { default as UpcomingEvents } from './UpcomingEvents';
 export { default as Attendees } from './Attendees';
 export { default as Calendar } from './Calendar';
-export { default as LineChart } from './Charts/LineChart';
 
