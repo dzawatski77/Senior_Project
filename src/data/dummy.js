@@ -1,12 +1,12 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineStock } from 'react-icons/ai';
-import { FiEdit, FiBarChart} from 'react-icons/fi';
+import { FiEdit } from 'react-icons/fi';
 import { BsKanban } from 'react-icons/bs';
 import { BiMeteor, BiTrophy } from 'react-icons/bi';
 import { IoMdCalendar, IoMdContacts } from 'react-icons/io';
 import { RiContactsLine } from 'react-icons/ri';
 import { MdComputer, MdOutlineSportsBasketball } from 'react-icons/md';
-import avatar from './avatar.jpg';
+
 
 
 export const kanbanGrid = [
