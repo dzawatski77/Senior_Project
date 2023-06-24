@@ -24,7 +24,6 @@ function UpcomingEvents() {
     
     <div className=' mt-8  m-2 md:m-10 p-2 md:p-10 drop-shadow-2xl dark:text-gray-200 dark:bg-main-dark-bg bg-white rounded-3xl'>
       <Header category="Page" title="Upcoming Events" />
-      
         <div style={{ padding: '14px' }}>
           <DropDownListComponent id="ddlelement" dataSource={filterType} fields={fields} change={onChange.bind(this)} index={0} popupHeight="150px" width="200px"/>
         </div>
